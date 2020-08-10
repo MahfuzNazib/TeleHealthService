@@ -23,3 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Patient Module Route
 
 Route::get('/Patient/Index','PatientController@index')->name('patient.index');
+Route::get('/Patient/Appointment','PatientController@appointment')->name('patient.appointment');
+
+//Get Doctor Details
+Route::get('/Patient/DoctorDetails/13','PatientController@doctorDetails')->name('patient.doctorDetails');
+//Active Doctor List
+Route::get('/Patient/ActiveDoctors','PatientController@activeDoctors')->name('patient.activeDoctors');

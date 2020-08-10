@@ -7,17 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Patient Index</title>
-  <!-- Custom fonts for this template-->
-  <link href="/userStyle/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="/userStyle/css/sb-admin-2.min.css" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
-
-  <!-- JQuery Link -->
-  <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  @include('links')
 
 </head>
 
@@ -41,21 +31,21 @@
 
       <!-- Profile -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('patient.index') }}">
           <i class="fas fa-user-nurse"></i>
           <span>My Profile</span></a>
       </li>
 
       <!-- Appointment -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('patient.appointment') }}">
           <i class="fas fa-user-friends"></i>
           <span>Appointment</span></a>
       </li>
 
       <!-- Active Doctor's List -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('patient.activeDoctors') }}">
           <i class="fas fa-user-nurse"></i>
           <span>Active Doctor's List</span></a>
       </li>
