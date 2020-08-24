@@ -1,23 +1,3 @@
-<style>
-    .btnEdit{
-        height: 40px;
-        width: 100%;
-        background-color: rgb(7, 134, 134);
-        border-radius: 5px;
-        cursor: pointer;
-        color: white;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: medium;
-        transition-duration: 0.5s;
-    }
-    .btnEdit:hover{
-        background-color: rgb(1, 54, 54);
-        border-radius: 7px;
-        font-size: large;
-        transition-duration: 0.5s;
-    }
-</style>
-
 @extends('layouts.patient')
 @section('content')
   <div class="row">
@@ -44,7 +24,7 @@
         <div class="tab-content">
             <!-- My Profile -->
             <div id="myProfile" class="container tab-pane active"><br>
-                <div class="row">
+                  <div class="row">
                     <div class="col-sm-8">
                         <div class="container bg card">
                         
@@ -91,96 +71,205 @@
                                 </center>
                             </div>
                         </div>
-                        <div>
-                            <a href="#">
-                                <input type="submit" value="Edit Profile" class="btnEdit">
-                            </a>
-                        </div>
-                        
                     </div>
+                </div>
+                <br/>
+                <!-- Update Personal Informations Button -->
+                <div class="row">
+                  <div class="col-sm-12">
+                    <center>
+                      <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#updatePersonalInformations">Update Personal Informations</button>
+                    </center>
+                  </div>
                 </div>
             </div>
 
             <!-- medicalInfo -->
             <div id="medicalInfo" class="container tab-pane"><br>
-                <center><h5>Medical Information</h5></center>
-                <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8">
-                        <table>
-                        <tr>
-                            <td> 
-                                Blood Presure 
-                                <input type="text" disabled class="form-control" value="5.7"> 
-                            </td>
-
-                            <td> 
-                                Pulse 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-
-                            <td> 
-                                Height 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td> 
-                                Weight 
-                                <input type="text" disabled class="form-control" value="5.7"> 
-                            </td>
-
-                            <td> 
-                                Blood Group 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-
-                            <td> 
-                                Temparature 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td> 
-                                Heart 
-                                <input type="text" disabled class="form-control" value="5.7"> 
-                            </td>
-
-                            <td> 
-                                Lung 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-
-                            <td> 
-                                BSA/BMI 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td> 
-                                Food Alergy(If Any) 
-                                <input type="text" disabled class="form-control" value="5.7"> 
-                            </td>
-
-                            <td> 
-                                Drug Alergy(If Any) 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-
-                            <td> 
-                                Others(If Any) 
-                                <input type="text" disabled class="form-control" value="80 KG"> 
-                            </td>
-                        </tr>
-                    </table>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-info"><center>Blood Presure</center></div>
+                        <div class="card-body"><center><strong>120</strong></center></div>
+                      </div>
                     </div>
-                    <div class="col-sm-2"></div>
-                </div>
+                    
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-success"><center>Pulse</center></div>
+                        <div class="card-body"><center><strong>120/180</strong></center></div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-primary"><center>Height</center></div>
+                        <div class="card-body"><center><strong>5.7"</strong></center></div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-warning"><center>Weight</center></div>
+                        <div class="card-body"><center><strong>80 KG</strong></center></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br/>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-info"><center>Blood Group</center></div>
+                        <div class="card-body"><center><strong>B(+)ve</strong></center></div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-success"><center>Tempareture</center></div>
+                        <div class="card-body"><center><strong>120/180</strong></center></div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-primary"><center>Heart</center></div>
+                        <div class="card-body"><center><strong>5.7"</strong></center></div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-warning"><center>Lung</center></div>
+                        <div class="card-body"><center><strong>80 KG</strong></center></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br/>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-info"><center>BSA/BMI</center></div>
+                        <div class="card-body"><center><strong>120</strong></center></div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-success"><center>Food Alergy(If Any)</center></div>
+                        <div class="card-body"><center><strong>120/180</strong></center></div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-primary"><center>Drug Alergy(If Any)</center></div>
+                        <div class="card-body"><center><strong>5.7"</strong></center></div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-header alert alert-warning"><center>Others(If Any)</center></div>
+                        <div class="card-body"><center><strong>80 KG</strong></center></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br/>
+                  <!-- Update Medical Informations Button -->
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <center>
+                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#updateMedicalInformations">Update Medical Informations</button>
+                      </center>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
   </div>
+
+  <!-- Update Personal Informations MODAL -->
+	<div class="modal fade" id="updatePersonalInformations" tabindex="-1" role="dialog" aria-labelledby="updatePersonalInformations" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="updatePersonalInformations"> <center> Update Personal Informations </center> </h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" id="name">
+
+        <label>Age</label>
+        <input type="number" class="form-control" name="age" id="age">
+
+        <label>Gender</label>
+        <select class="form-control">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+
+        <label>Contact No</label>
+        <input type="number" class="form-control" name="contactNo" id="contactNo">
+
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" id="email">
+
+        <label>Address</label>
+        <textarea class="form-control" name="address" id="address"></textarea>
+			</div>
+			<div class="modal-footer">
+				<form method="post" action="#">
+					<input type="hidden" name="packageId" id="packageId" value="">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+					 <button type="submit" class="btn btn-info">Update</button> 
+				</form>
+			</div>
+			</div>
+    </div>
+    
+
+    <!-- Update Medical Informations MODAL -->
+	<div class="modal fade" id="updateMedicalInformations" tabindex="-1" role="dialog" aria-labelledby="updateMedicalInformations" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="updateMedicalInformations"> <center> Update Medical Informations </center> </h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <label>Blood Presure</label>
+            <input type="text" name="bloodPresure" class="form-control">
+          </div>
+          <div class="col-sm-4">
+            <label>Blood Presure</label>
+            <input type="text" name="bloodPresure" class="form-control">
+          </div>
+          <div class="col-sm-4">
+            <label>Blood Presure</label>
+            <input type="text" name="bloodPresure" class="form-control">
+          </div>
+        </div>
+			</div>
+			<div class="modal-footer">
+				<form method="post" action="#">
+					<input type="hidden" name="packageId" id="packageId" value="">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+					 <button type="submit" class="btn btn-info">Update</button> 
+				</form>
+			</div>
+			</div>
+		</div>
 @endsection

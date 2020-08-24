@@ -11,8 +11,15 @@
                     </center>
                 </div>
 
+                <!-- Show Invalid Message -->
+                @if(session('message'))
+                    <div class="alert alert-danger">
+                        {{ session('message') }}
+                    </div>
+                @endif
+
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login.custom') }}">
                         @csrf
 
                         <div class="form-group row">

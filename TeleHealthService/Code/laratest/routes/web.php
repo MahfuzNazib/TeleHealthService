@@ -1,30 +1,25 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use Illuminate\Support\Facades\Route; 
 
 Route::get('/', function () {
     return view('index');
 });
 
 Auth::routes();
+Route::post('/login/custom', 'LoginController@login')->name('login.custom');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Admin Module Route
+Route::get('admin/index', 'AdminController@index')->name('admin.index');
 
+// Route::get('/home', 'HomeController@index')->name('home');
+
+// Logout Route
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 // Patient Module Route
-
 Route::get('/Patient/Index','PatientController@index')->name('patient.index');
 Route::get('/Patient/Appointment','PatientController@appointment')->name('patient.appointment');
-
 //Get Doctor Details
 Route::get('/Patient/DoctorDetails/13','PatientController@doctorDetails')->name('patient.doctorDetails');
 //Active Doctor List
